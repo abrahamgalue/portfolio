@@ -1,0 +1,72 @@
+---
+import IconPage from '@/components/icons/IconPage.astro'
+import IconServer from '@/components/icons/IconServer.astro'
+import SkillCard from '@/components/SkillCard.astro'
+import IconBranch from './icons/IconBranch.astro'
+import IconTool from './icons/IconTool.astro'
+---
+
+<section class="skills">
+  <div class="container">
+    <div class="skills-grid">
+      <SkillCard title="Frontend" desc="HTML, CSS, JavaScript, TypeScript">
+        <IconPage />
+      </SkillCard>
+
+      <SkillCard
+        title="Herramientas"
+        desc="Git, Github, Docker, CI/CD"
+        color="orange"
+      >
+        <IconTool />
+      </SkillCard>
+
+      <SkillCard
+        title="Backend"
+        desc="Node.js, Express, MongoDB, Turso"
+        color="green"
+      >
+        <IconServer />
+      </SkillCard>
+
+      <SkillCard
+        title="Frameworks"
+        desc="React, Next.js, Astro, Expo"
+        color="purple"
+      >
+        <IconBranch />
+      </SkillCard>
+    </div>
+  </div>
+</section>
+
+<style>
+  .skills {
+    background-color: var(--white);
+    padding: 3rem 0;
+  }
+
+  @media screen and (width >= 768px) {
+    .skills {
+      padding: 4rem 0;
+    }
+  }
+
+  .skills-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (width >= 640px) {
+    .skills-grid {
+      gap: 1.5rem;
+    }
+  }
+
+  @media screen and (width >= 768px) {
+    .skills-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+</style>

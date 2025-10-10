@@ -17,7 +17,7 @@
       fill: #000;
     }
 
-    @media (prefers-color-scheme: dark) {
+    @media screen and (prefers-color-scheme: dark) {
       g {
         fill: #FFF;
       }

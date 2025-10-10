@@ -1,0 +1,124 @@
+{
+  "projects": [
+    {
+      "title": "Visylo",
+      "description": "MVP para gestionar eventos y poder invitar a personas a participar en ellos.",
+      "tags": ["HTML", "CSS", "JavaScript", "Docker", "MySQL"],
+      "demoUrl": "https://visylo.onlyfor.dev/login",
+      "githubUrl": "",
+      "image": "visylo-mvp.jpg"
+    },
+    {
+      "title": "Green Wall Manager",
+      "description": "Proyecto personal de tesis universitaria.",
+      "tags": ["React Native", "Expo", "Supabase", "PostgreSQL"],
+      "demoUrl": "",
+      "githubUrl": "https://github.com/abrahamgalue/proyecto-tesis",
+      "image": "green-wall-manager.jpg"
+    },
+    {
+      "title": "Next.js Dashboard",
+      "description": "Dashboard full-stack con autenticacion que permite administrar facturas.",
+      "tags": ["Next.js", "PostgreSQL", "Vercel"],
+      "demoUrl": "https://next14-dashboard-abraham.vercel.app/",
+      "githubUrl": "https://github.com/abrahamgalue/next14-learning-course",
+      "image": "nextjs-dashboard.jpg"
+    },
+    {
+      "title": "Spotify Clone",
+      "description": "Clon de la aplicación oficial de Spotify.",
+      "tags": ["Astro", "React", "Svelte", "TailwindCSS"],
+      "demoUrl": "https://spotify-abraham-clone.vercel.app/",
+      "githubUrl": "https://github.com/abrahamgalue/spotify-abraham-clone",
+      "image": "spotify-clone.png"
+    },
+    {
+      "title": "ChatBot AI",
+      "description": "Chatbot hecho con Gemini AI.",
+      "tags": ["Preact", "LLM", "Gemini", "Cloudflare"],
+      "demoUrl": "https://gemini-ai-chatbot-abrahamgalue.pages.dev/",
+      "githubUrl": "https://github.com/abrahamgalue/gemini-ai-chatbot",
+      "image": "gemini-ai-chatbot.jpg"
+    },
+    {
+      "title": "ChatBot API",
+      "description": "API que te permite conectarte con un Chatbot utilizando Gemini AI.",
+      "tags": ["Gemini", "LLM", "Express.js", "Vercel"],
+      "demoUrl": "https://chatbot-api-abrahamgalue.vercel.app/",
+      "githubUrl": "https://github.com/abrahamgalue/chatbot-api",
+      "image": "chatbot-api.jpg"
+    },
+    {
+      "title": "Google Translate Clone",
+      "description": "Clon del traductor oficial de Google.",
+      "tags": ["React", "Gemini", "LLM"],
+      "demoUrl": "https://google-translate-clone-abrahamgalue.netlify.app/",
+      "githubUrl": "https://github.com/abrahamgalue/react-projects-course-midudev/tree/main/09-google-translate-clone",
+      "image": "google-translate-clone.jpg"
+    },
+    {
+      "title": "Translate API",
+      "description": "API que te permite traducir texto en diferentes idiomas, conectandose a un LLM.",
+      "tags": ["Express.js", "Vercel", "LLM", "Gemini", "Mistral"],
+      "demoUrl": "https://translate-api-abrahamgalue.vercel.app/",
+      "githubUrl": "https://github.com/abrahamgalue/translate-api",
+      "image": "translate-api.jpg"
+    },
+    {
+      "title": "Metacritic App",
+      "description": "Aplicación que muestra tarjetas de Pokémon con sus estadísticas.",
+      "tags": ["React Native", "Expo", "Mobile"],
+      "demoUrl": "",
+      "githubUrl": "https://github.com/abrahamgalue/react-native-metacritic-app",
+      "image": "metacritic-app.jpg"
+    },
+    {
+      "title": "Meli",
+      "description": "Aplicación creada para completar una prueba tecnica de Mercado Libre.",
+      "tags": ["TypeScript", "Next.js", "Vercel"],
+      "demoUrl": "https://meli-prueba-abraham.vercel.app/",
+      "githubUrl": "https://github.com/abrahamgalue/meli-prueba-tecnica",
+      "image": "meli-test.jpg"
+    },
+    {
+      "title": "Weather MCP",
+      "description": "Pequeño servidor MCP creado con fines didacticos.",
+      "tags": ["MCP", "TypeScript", "AI"],
+      "demoUrl": "",
+      "githubUrl": "https://github.com/abrahamgalue/mcp-practice",
+      "image": "weather-mcp.jpg"
+    },
+    {
+      "title": "Task API",
+      "description": "API Rest acerca de tareas diarias.",
+      "tags": ["Express.js", "JWT", "MongoDB"],
+      "demoUrl": "",
+      "githubUrl": "https://github.com/abrahamgalue/tasks-api",
+      "image": "task-api.jpg"
+    },
+    {
+      "title": "URL Shortener Microservice",
+      "description": "Microservicio acortador de URL.",
+      "tags": ["Express.js", "MongoDB", "JavaScript"],
+      "demoUrl": "",
+      "githubUrl": "https://github.com/abrahamgalue/back-end-development-and-apis-certification-projects/tree/main/boilerplate-project-urlshortener",
+      "image": "url-shortener-microservice.jpg"
+    },
+    {
+      "title": "Almuerzi API",
+      "description": "API Rest con fines didacticos para aprender Serverless Functions.",
+      "tags": ["Express.js", "MongoDB", "JWT"],
+      "demoUrl": "https://serverless-functions-abrahamgalue.vercel.app/meals",
+      "githubUrl": "https://github.com/abrahamgalue/serverless-course",
+      "image": "almuerzi-api.png"
+    },
+    {
+      "title": "Live Chat",
+      "description": "Aplicación que muestra tarjetas de Pokémon con sus estadísticas.",
+      "tags": ["Node.js", "Express.js", "WebSockets"],
+      "demoUrl": "",
+      "githubUrl": "https://github.com/abrahamgalue/nodejs-course/tree/main/clase-6",
+      "image": "live-chat.jpg"
+    }
+  ]
+}

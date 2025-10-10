@@ -1,0 +1,278 @@
+---
+import IconPhone from '@/components/icons/IconPhone.astro'
+import IconMail from '@/components/icons/IconMail.astro'
+import IconSocialGithub from '@/components/icons/IconSocialGithub.astro'
+import IconSocialLinkedin from '@/components/icons/IconSocialLinkedin.astro'
+import IconSocialX from '@/components/icons/IconSocialX.astro'
+---
+
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="section-header">
+      <div class="badge">Contacto</div>
+      <h2>¡Hablemos!</h2>
+      <p>
+        ¿Tienes un proyecto en mente? Estoy disponible para nuevas oportunidades
+        y colaboraciones.
+      </p>
+    </div>
+    <div class="contact-content">
+      <div class="contact-form-container">
+        <div class="contact-form">
+          <h3>Envíame un mensaje</h3>
+          <form name="contact" method="POST" data-netlify="true">
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input
+                autocomplete="given-name"
+                id="name"
+                name="name"
+                placeholder="Tu nombre"
+                required
+                type="text"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                autocomplete="email"
+                id="email"
+                name="email"
+                placeholder="tu@email.com"
+                required
+                type="email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="message">Mensaje</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Cuéntame sobre tu proyecto..."
+                required
+                rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full"
+              >Enviar mensaje</button
+            >
+          </form>
+        </div>
+      </div>
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <IconMail />
+          </div>
+          <div class="contact-text">
+            <h4>Email</h4>
+            <p>abrahamgaluecontacto@gmail.com</p>
+            <a href="mailto:abrahamgaluecontacto@gmail.com" class="contact-link"
+              >Enviar email</a
+            >
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <IconPhone />
+          </div>
+          <div class="contact-text">
+            <h4>Teléfono</h4>
+            <p>+58 (412) 286-2882</p>
+            <a href="tel:+584122862882" class="contact-link">Llamar ahora</a>
+          </div>
+        </div>
+        <div class="social-media">
+          <h4>Sígueme en redes sociales</h4>
+          <div class="social-icons">
+            <a
+              href="https://github.com/abrahamgalue"
+              target="_blank"
+              class="social-icon"
+              aria-label="Go to GitHub"
+            >
+              <IconSocialGithub />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/abrahamgalue/"
+              target="_blank"
+              class="social-icon"
+              aria-label="Go to Linkedin"
+            >
+              <IconSocialLinkedin />
+            </a>
+            <a
+              href="https://x.com/abrahamGaluee/"
+              target="_blank"
+              class="social-icon"
+              aria-label="Go to X"
+            >
+              <IconSocialX />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact {
+    background-color: var(--gray-50);
+    padding: 4rem 0;
+  }
+
+  @media screen and (width >= 768px) {
+    .contact {
+      padding: 6rem 0;
+    }
+  }
+
+  .contact-content {
+    display: grid;
+    gap: 3rem;
+  }
+
+  @media screen and (width >= 768px) {
+    .contact-content {
+      align-items: start;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .contact-form-container {
+    background-color: var(--white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  @media screen and (width >= 640px) {
+    .contact-form {
+      padding: 2rem;
+    }
+  }
+
+  .contact-form h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+
+  @media screen and (width >= 640px) {
+    .contact-form h3 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    color: var(--gray-700);
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--gray-300);
+    padding: 0.75rem 1rem;
+    transition: var(--transition-fast);
+    width: 100%;
+  }
+
+  .form-group textarea {
+    font-family: inherit;
+    min-height: 100px;
+    resize: vertical;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+    outline: none;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .contact-item {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .contact-icon {
+    align-items: center;
+    background-color: rgba(37, 99, 235, 0.1);
+    border-radius: var(--border-radius-full);
+    color: var(--primary);
+    display: flex;
+    flex-shrink: 0;
+    height: 3rem;
+    justify-content: center;
+    width: 3rem;
+  }
+
+  .contact-text h4 {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+
+  .contact-text p {
+    color: var(--gray-600);
+    margin-bottom: 0.25rem;
+  }
+
+  .contact-link {
+    color: var(--primary);
+    font-size: 0.875rem;
+    transition: var(--transition-fast);
+  }
+
+  .contact-link:hover {
+    text-decoration: underline;
+  }
+
+  .social-media {
+    margin-top: 1rem;
+  }
+
+  .social-media h4 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .social-icon {
+    align-items: center;
+    background-color: var(--gray-100);
+    border-radius: var(--border-radius-full);
+    color: var(--gray-600);
+    display: flex;
+    height: 2.5rem;
+    justify-content: center;
+    transition: var(--transition);
+    width: 2.5rem;
+  }
+
+  .social-icon:hover {
+    background-color: rgba(37, 99, 235, 0.1);
+    color: var(--primary);
+  }
+</style>

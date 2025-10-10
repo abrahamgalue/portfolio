@@ -1,0 +1,97 @@
+<div class="mobile-menu" id="mobile-menu">
+  <div class="mobile-menu-header">
+    <div class="logo">
+      <span class="logo-text">Abraham Galue</span>
+    </div>
+    <button class="close-menu" id="close-menu">
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M18 6L6 18M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
+  <nav class="nav-mobile">
+    <ul>
+      <li><a href="#top">Inicio</a></li>
+      <li><a href="#projects">Proyectos</a></li>
+      <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+  </nav>
+  <div class="mobile-menu-footer">
+    <a href="#contact" class="btn btn-primary btn-full">Contáctame</a>
+  </div>
+</div>
+
+<style>
+  .mobile-menu {
+    background-color: var(--white);
+    box-shadow: var(--shadow-xl);
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    max-width: 400px;
+    position: fixed;
+    right: -100%;
+    top: 0;
+    transition: var(--transition);
+    width: 100%;
+    z-index: 200;
+  }
+
+  .mobile-menu.active {
+    right: 0;
+  }
+
+  .mobile-menu-header {
+    align-items: center;
+    border-bottom: 1px solid var(--gray-200);
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+
+  .close-menu {
+    align-items: center;
+    background-color: var(--gray-100);
+    border-radius: var(--border-radius-full);
+    border: none;
+    color: var(--gray-800);
+    cursor: pointer;
+    display: flex;
+    height: 2.5rem;
+    justify-content: center;
+    transition: var(--transition-fast);
+    width: 2.5rem;
+  }
+
+  .close-menu:hover {
+    background-color: var(--gray-200);
+  }
+
+  .nav-mobile {
+    flex: 1;
+    padding: 1.5rem;
+  }
+
+  .nav-mobile ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .nav-mobile a {
+    color: var(--gray-800);
+    font-size: 1.125rem;
+    font-weight: 500;
+    transition: var(--transition-fast);
+  }
+
+  .nav-mobile a:hover {
+    color: var(--primary);
+  }
+
+  .mobile-menu-footer {
+    border-top: 1px solid var(--gray-200);
+    padding: 1.5rem;
+  }
+</style>

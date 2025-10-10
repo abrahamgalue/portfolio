@@ -1,0 +1,129 @@
+---
+import { Image } from 'astro:assets'
+import aboutMeImg from '@/images/about-me.jpg'
+---
+
+<section id="about" class="about">
+  <div class="container">
+    <div class="about-content">
+      <div class="about-image">
+        <Image src={aboutMeImg} alt="Abraham Galue" />
+      </div>
+      <div class="about-text">
+        <div>
+          <div class="badge">Sobre mí</div>
+        </div>
+        <h2>Desarrollador de Software Apasionado</h2>
+        <p>
+          Desde pequeño me apasiona la programación. Inicié con Java creando
+          Mods de Minecraft, luego aprendí JavaScript de forma autodidacta y más
+          tarde estudié Ingeniería Informática en la Universidad Privada Dr.
+          Rafael Belloso Chacín.
+        </p>
+        <p>
+          Hoy tengo más de 4 años de experiencia desarrollando soluciones
+          digitales funcionales y atractivas. Disfruto aprender constantemente,
+          compartir conocimientos y transformar ideas en experiencias que
+          generen impacto.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    background-color: #efefef;
+    padding: 4rem 0;
+  }
+
+  @media screen and (width >= 768px) {
+    .about {
+      padding: 6rem 0;
+    }
+  }
+
+  .about-content {
+    background: linear-gradient(90deg, #ffffff00 30%, #f8f8f8 30%);
+    display: grid;
+    overflow: hidden;
+    padding: 95px 0;
+    position: relative;
+  }
+
+  @media screen and (width <= 768px) {
+    .about-content {
+      background: #f8f8f8;
+      padding: 15px 15px 50px;
+    }
+  }
+
+  @media screen and (width >= 768px) {
+    .about-content {
+      align-items: center;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .about-image {
+    border-radius: var(--border-radius-xl);
+    box-shadow: var(--shadow-xl);
+    margin: 0 auto;
+    max-width: 350px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
+
+  @media screen and (width >= 640px) {
+    .about-image {
+      max-width: 400px;
+    }
+  }
+
+  .about-image img {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    order: 1;
+    text-align: center;
+  }
+
+  @media screen and (width <= 768px) {
+    .about-text {
+      margin-top: 1rem;
+    }
+  }
+
+  @media screen and (width >= 768px) {
+    .about-text {
+      order: 2;
+      text-align: left;
+    }
+  }
+
+  .about-text h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+  }
+
+  @media screen and (width >= 768px) {
+    .about-text h2 {
+      font-size: 2.25rem;
+    }
+  }
+
+  .about-text > p {
+    color: var(--gray-600);
+    max-width: 54ch;
+    text-align: start;
+    text-wrap: balance;
+  }
+</style>

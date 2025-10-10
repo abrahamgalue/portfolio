@@ -1,0 +1,89 @@
+---
+interface Props {
+  title: string
+  desc: string
+  color?: 'primary' | 'orange' | 'green' | 'purple'
+}
+
+const { title, desc, color = 'primary' } = Astro.props
+---
+
+<div class="skill-card">
+  <div class:list={['skill-icon', color]}>
+    <slot />
+  </div>
+  <h3>{title}</h3>
+  <p>{desc}</p>
+</div>
+
+<style>
+  .skill-card {
+    align-items: center;
+    background-color: var(--gray-50);
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 1.5rem 1rem;
+    text-align: center;
+  }
+
+  @media screen and (width >= 640px) {
+    .skill-card {
+      padding: 1.5rem;
+    }
+  }
+
+  .skill-icon {
+    align-items: center;
+    display: flex;
+    height: 3rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+    width: 3rem;
+  }
+
+  .skill-icon :global(.icon) {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .skill-icon.primary {
+    color: var(--primary);
+  }
+
+  .skill-icon.orange {
+    color: var(--orange);
+  }
+
+  .skill-icon.green {
+    color: var(--green);
+  }
+
+  .skill-icon.purple {
+    color: var(--purple);
+  }
+
+  .skill-card h3 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  @media screen and (width >= 640px) {
+    .skill-card h3 {
+      font-size: 1rem;
+    }
+  }
+
+  .skill-card p {
+    color: var(--gray-500);
+    font-size: 0.75rem;
+  }
+
+  @media screen and (width >= 640px) {
+    .skill-card p {
+      font-size: 0.875rem;
+    }
+  }
+</style>

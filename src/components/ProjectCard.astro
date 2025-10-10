@@ -1,0 +1,149 @@
+---
+import type { ImageMetadata } from 'astro'
+import { Image } from 'astro:assets'
+import IconBrandGithub from '@/components/icons/IconBrandGithub.astro'
+import IconExternalLink from '@/components/icons/IconExternalLink.astro'
+
+interface Props {
+  imagePath: string
+  title: string
+  demoUrl: string
+  githubUrl: string
+  tags: string[]
+  description: string
+}
+
+const { imagePath, title, demoUrl, githubUrl, tags, description } = Astro.props
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/*.{jpeg,jpg,png,gif,webp}'
+)
+if (!images[imagePath])
+  throw new Error(
+    `"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif,webp}"`
+  )
+---
+
+<div class="project-card">
+  <div class="project-image">
+    <Image src={images[imagePath]()} alt={title} />
+    <div class="project-overlay">
+      <div class="project-buttons">
+        {
+          demoUrl.trim() && (
+            <a href={demoUrl} target="_blank" class="btn btn-sm btn-secondary">
+              <IconExternalLink />
+              Demo
+            </a>
+          )
+        }
+        {
+          githubUrl.trim() && (
+            <a
+              href={githubUrl}
+              target="_blank"
+              class="btn btn-sm btn-outline-light"
+            >
+              <IconBrandGithub />
+              Código
+            </a>
+          )
+        }
+      </div>
+    </div>
+  </div>
+  <div class="project-content">
+    <div class="project-tags">
+      {tags.map((tag) => <span class="tag">{tag}</span>)}
+    </div>
+    <h3>{title}</h3>
+    <p>{description}</p>
+  </div>
+</div>
+
+<style>
+  .project-card {
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow);
+    height: -moz-fit-content;
+    height: fit-content;
+    overflow: hidden;
+    transition: var(--transition);
+  }
+
+  .project-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-5px);
+  }
+
+  .project-image {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .project-image img {
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .project-overlay {
+    align-items: flex-end;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    display: flex;
+    inset: 0;
+    opacity: 0;
+    padding: 1.5rem;
+    position: absolute;
+    transition: var(--transition);
+  }
+
+  .project-card:hover .project-overlay {
+    opacity: 1;
+  }
+
+  .project-buttons {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .project-content {
+    background-color: var(--white);
+    padding: 1.5rem;
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .tag {
+    background-color: var(--gray-100);
+    border-radius: var(--border-radius);
+    color: var(--gray-700);
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .project-content h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  @media screen and (width >= 640px) {
+    .project-content h3 {
+      font-size: 1.25rem;
+    }
+  }
+
+  .project-content p {
+    color: var(--gray-600);
+    font-size: 0.875rem;
+  }
+</style>

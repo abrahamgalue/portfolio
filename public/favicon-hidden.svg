@@ -12,7 +12,7 @@
       fill: #343841;
     }
 
-    @media (prefers-color-scheme: dark) {
+    @media screen and (prefers-color-scheme: dark) {
       path {
         fill: #FFF;
       }

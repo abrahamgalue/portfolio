@@ -1,4 +1,4 @@
-minimumReleaseAge: 1444
+minimumReleaseAge: 1440
 
 minimumReleaseAgeExclude:
   - astro
