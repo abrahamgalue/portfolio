@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="Error del servidor | Abraham Galue">
+  <main>
+    <div>
+      <h1>Algo salió mal</h1>
+      <p>Ocurrió un error interno del servidor.</p>
+      <a href="/" class="btn btn-primary">Volver al inicio</a>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: var(--dark-blue);
+    color: var(--white);
+    padding: 2rem;
+  }
+
+  main div {
+    text-align: center;
+    display: grid;
+    gap: 1rem;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.15;
+  }
+
+  p {
+    color: var(--gray-300);
+    margin: 0 auto 0.25rem;
+    max-width: 60ch;
+  }
+
+  a {
+    margin: 0 auto;
+    max-width: 250px;
+  }
+
+  @media (width >= 768px) {
+    h1 {
+      font-size: 2.75rem;
+    }
+  }
+</style>

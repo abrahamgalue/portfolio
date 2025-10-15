@@ -148,4 +148,88 @@ const { title } = Astro.props
   select {
     font: inherit;
   }
+
+  /* Botones */
+  .btn {
+    align-items: center;
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 0.875rem;
+    font-weight: 600;
+    gap: 0.5rem;
+    justify-content: center;
+    outline: none;
+    padding: 0.75rem 1.5rem;
+    transition: var(--transition);
+  }
+
+  @media screen and (width >= 768px) {
+    .btn {
+      font-size: 1rem;
+    }
+  }
+
+  .btn-sm {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .btn-primary {
+    background: linear-gradient(
+      135deg,
+      var(--primary) 0%,
+      var(--primary-dark) 100%
+    );
+    box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.3);
+    color: var(--white);
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(
+      135deg,
+      var(--primary-dark) 0%,
+      var(--primary) 100%
+    );
+    box-shadow: 0 6px 20px 0 rgba(37, 99, 235, 0.4);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    color: var(--gray-800);
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--gray-50);
+    transform: translateY(-2px);
+  }
+
+  .btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+  }
+
+  .btn-outline:hover {
+    background-color: var(--white);
+    color: var(--primary);
+  }
+
+  .btn-outline-light {
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    color: var(--white);
+  }
+
+  .btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--white);
+  }
+
+  .btn-full {
+    width: 100%;
+  }
 </style>
