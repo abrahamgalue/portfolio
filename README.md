@@ -1,54 +1,62 @@
-# Astro Starter Kit: Basics
+<div align='center'>
 
-```sh
-npm create astro@latest -- --template basics
-```
+# 🚀 Astro: Personal Portfolio
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+</div>
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Portafolio personal.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+> 🧩 Aquí puedes ver su [**Live Demo**](https://abrahamgalue-portfolio.netlify.app/).
 
-## 🚀 Project Structure
+![vista-previa](public/preview/01-page-preview.jpg)
 
-Inside of your Astro project, you'll see the following folders and files:
+![vista-previa](public/preview/02-page-preview.jpg)
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+![vista-previa](public/preview/03-page-preview.jpg)
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🚀 Descripción
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Este proyecto es un portafolio personal desarrollado con **Astro**, diseñado para mostrar mis habilidades, proyectos y experiencia de manera profesional y atractiva.
 
-Any static assets, like images, can be placed in the `public/` directory.
+El portafolio incluye secciones como **Sobre mí**, **Proyectos**, **Habilidades** y **Contacto**, proporcionando una visión completa de mi perfil profesional.
 
-## 🧞 Commands
+## ⚡ Comenzar
 
-All commands are run from the root of the project, from a terminal:
+### Prerrequisitos
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+1. Git.
+2. Node.js 20 o superior.
+3. pnpm (opcional, puedes usar npm o yarn).
 
-## 👀 Want to learn more?
+## 🔧 Instalación
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### Usando pnpm
+
+1. **Clona el repositorio:**
+
+   ```bash
+   git clone https://github.com/abrahamgalue/portfolio.git
+   cd portfolio
+   ```
+
+2. **Instala las dependencias:**
+
+   ```bash
+   pnpm install
+   ```
+
+3. **Inicia el servidor de desarrollo:**
+
+   ```bash
+   pnpm dev
+   ```
+
+4. **Abre tu navegador y visita:**
+
+   ```bash
+   http://localhost:4321
+   ```
+
+## 🎭 Tecnologías
+
+- [**Astro**](https://astro.build/) Framework para construir sitios web rápidos.
